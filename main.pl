@@ -1,8 +1,8 @@
-
-
 :- dynamic(riesgo/2).
-:- dynamic(inveriones/3).
+:- dynamic(inveriones/4).
 :- dynamic(riesgoUsuario/2).
+:- dynamic(caracteristicasDeseadasUsuario/1).
+:- dynamic(caracteristicasNoDeseadasUsuario/1).
 
 
 clearScreen :-
@@ -10,7 +10,7 @@ clearScreen :-
 
 cargarConocimiento :-
 	retractall(riesgo(_,_)),retractall(inversiones(_,_,_)),
-	retractall(riesgo_usuario(_,_)), 
+	retractall(riesgo_usuario(_,_)), retractall(caracteristicasDeseadasUsuario(_)), retractall(caracteristicasNoDeseadasUsuario(_)),
 	consult('/home/eliseo/Escritorio/IA/tpi-ia/bd_riesgos.pl'),consult('/home/eliseo/Escritorio/IA/tpi-ia/bd_inversiones.pl').
 
 
