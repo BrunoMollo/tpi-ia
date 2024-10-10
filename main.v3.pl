@@ -197,13 +197,14 @@ caracteristicas_compatibles(Caracteristicas):-
     findall(NoDeseada, caracteristicasNoDeseadasUsuario(NoDeseada), ListaNoDeseadas),
     intersection(Caracteristicas, ListaNoDeseadas, []).
 
+
+resultado_final([]):-writeln("Perdón, no encontré inversiones para vos"), nl.
+
 resultado_final(Lista):-
     writeln("Te recomiendo alguna de las siguientes inversiones: "),
     listar_recomendaciones(Lista),
     writeln("Espero que mi asesoramiento te haya sido útil")
 .
-
-resultado_final([]):-writeln("Perdón, no encontré inversiones para vos"), nl.
 
 listar_recomendaciones([[H1, H2] | T]):-
 	write("- "), writeln(H1),
