@@ -9,5 +9,5 @@ Alumnos:
 
 Commando para correr el programa:
 ```bash
-swipl -s main.pl -g main -t halt
+swipl -s main.pl -g inicio -t halt
 ```
